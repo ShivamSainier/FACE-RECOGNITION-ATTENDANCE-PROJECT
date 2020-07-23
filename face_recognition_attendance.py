@@ -23,6 +23,10 @@ encode_imgtest=fe.face_encodings(imgtest)[0]
 cv2.rectangle(imgelon,(loc_imgelon[3],loc_imgelon[0]),(loc_imgelon[1],loc_imgelon[2]),(255,125,134),2)
 cv2.rectangle(imgtest,(loc_imgtest[3],loc_imgtest[0]),(loc_imgtest[1],loc_imgtest[2]),(255,125,134),2)
 
+#Compare both faces
+compare=fe.compare_faces([encode_imgelon],encode_imgtest)
+print(compare)
+
 #Show images untill press enter 
 
 cv2.imshow("IMAGE_ELON",imgelon)
